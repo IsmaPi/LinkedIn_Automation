@@ -20,3 +20,4 @@ def get_top_story_links():
 
     return top_story_links
 
+print(get_top_story_links())
