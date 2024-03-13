@@ -24,15 +24,16 @@ def get_all_text():
         data['url'].append(url)
         data['text'].append(text)
 
-
         print(f'Finished scraping {url}')
         print(f'Full text: {text}')
 
-    return pd.DataFrame(data)
+    return data
+
+
+# Transform the data into a json file
+def save_to_json(data):
+    json_articles = data.to_json('data.json')
+
+    return json_articles
 
 print(get_all_text())
-
-# TODO: Clean the text and remove any unwanted characters
-
-
-
